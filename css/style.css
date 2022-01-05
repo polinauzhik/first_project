@@ -280,15 +280,15 @@
   .page {
     margin-left: auto;
     margin-right: auto;
-    width: 100vh;
+    width: 100vw;
   }
   
   .content {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 64px;
   }
   
@@ -586,17 +586,18 @@
     vertical-align: super;
   }
 
-  .our_products {
-    margin-left: 20px;
+  /*.our_products {
+    /*margin-left: 20px;
     margin-right: 20px;
   }
+  */
 
   .product-cards {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 64px;
 
   }
@@ -672,10 +673,10 @@
   
   .contacts {
     display: flex;
-    width: 1170px;
+    width: 70%;
     background-color: #f4f7f6;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 64px;
     padding-top: 30px;
     padding-bottom: 30px;
