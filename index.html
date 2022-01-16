@@ -45,7 +45,7 @@
     <article class="trends">
         <h2 class="trend-title">Сейчас в тренде</h2>
         <div class="trend-cards">
-            <div class="trend-card_1">
+            <div class="trend-card trend-card_1">
                 <div class="trend-card-content">
                     <ul class="tags">   
                         <li class="tag-item">
@@ -58,7 +58,7 @@
                     <h2 class="title"><a class="trend-card-title-link" href="#0">Сейчас в тренде: сад на подоконнике</a></h2>
                 </div>
             </div>
-            <div class="trend-card_2">
+            <div class="trend-card trend-card_2">
                 <div class="trend-card-content">
                     <ul class="tags">   
                         <li class="tag-item">
@@ -68,7 +68,7 @@
                     <h2 class="title"><a class="trend-card-title-link" href="#0">Cыры на красивых картинках из интернета: какие они на вкус?</a></h2>
                 </div>
             </div>
-            <div class="trend-card_3">
+            <div class="trend-card trend-card_3">
                 <div class="trend-card-content">
                     <ul class="tags">   
                         <li class="tag-item">
@@ -81,7 +81,7 @@
                     <h2 class="title"><a class="trend-card-title-link" href="#0">Собираемся в первый поход в горы</a></h2>
                 </div>
             </div>
-            <div class="trend-card_4">
+            <div class="trend-card trend-card_4">
                 <div class="trend-card-content">
                     <ul class="tags">   
                         <li class="tag-item">
@@ -298,7 +298,7 @@
               <form class="search">
                 <label class="search-group">
                   <input type="search" class="field" name="query" placeholder="Найти..." required>
-                  <span class="search_sr">search_query</span>
+                  <span class="search_sr">field_for_search</span>
                 </label>
                 <button class="button">
                   <span class="search_sr">search_button</span>
@@ -308,10 +308,10 @@
             <section class="section-subscribe">
               <h3 class="aside-title">Рассылка</h3>
               <form class="subscribe-form">
-                <div class="form-row">
+                <label>
                   <input type="email" class="mail-field" placeholder="Ваш email-адрес">
                   <span class="subscribe_sr">subscribe_field</span>
-                </div>
+                </label>
                 <button class="mail-button" type="submit" required>Подписаться</button>
               </form>
             </section>
@@ -381,7 +381,10 @@
             <h2 class="trend-title">Наши изделия</h2>
             <div class="product-cards">
                 <div class="product-card">
-                    <img src="images/shop-item-desk1.jpg" class="product-pic" alt>
+                    <picture>
+                      <source srcset="images/shop-item-desk1.jpg" media="(min-width: 1200px)">
+                      <img src="images/shop-item-desk1.jpg" class="product-pic" alt>
+                    </picture>
                     <div class="product-card-content">
                         <h2 class="title">Подушка на диван</h2>
                         <div class="product-text">
@@ -401,7 +404,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/shop-item-desk2.jpg" class="product-pic" alt>
+                    <picture>
+                      <source srcset="images/shop-item-desk2.jpg" media="(min-width: 1200px)">
+                     <img src="images/shop-item-desk2.jpg" class="product-pic" alt>
+                    </picture>
                     <div class="product-card-content">
                         <h2 class="title">Кукла «Зайчик»</h2>
                         <div class="product-text">
@@ -418,7 +424,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/shop-item-desk3.jpg" class="product-pic" alt>
+                    <picture>
+                     <source srcset="images/shop-item-desk3.jpg" media="(min-width: 1200px)">
+                     <img src="images/shop-item-desk3.jpg" class="product-pic" alt>
+                    </picture>
                     <div class="product-card-content">
                         <h2 class="title">Шестиугольная рамка</h2>
                         <div class="product-text">
@@ -482,13 +491,13 @@
     </div>
 
     <div class="popup">
-        <button class="close-button">
-          <span class="close">close</span>
-        </button>
         <div class="popup-content">
+          <button class="close-button">
+            <span class="close">close</span>
+          </button>
           <div class="popup-text">
             <h2 class="popup-title">Ваш фидбек</h2>
-            <div class="form-row">
+            
              <label class="form-group">
                <div class="form-question">Как часто вы заходите на сайт?</div>
                <select class="select">
@@ -498,8 +507,8 @@
                 <option>Несколько раз в год</option>
                </select>
              </label> 
-            </div>
-            <div class="form-row">
+            
+            
               <label class="form-group">
                 <div class="form-question">Вы подписаны на e-mail рассылку?</div>
                 <label class="radio-group">
@@ -511,14 +520,14 @@
                   <span class="radio-group-text">Нет</span>
                 </label>
               </label>
-            </div>
-            <div class="form-row">
+            
+            <label>
               <div class="form-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</div>
               <textarea class="popup-field" placeholder="Может, больше рецептов?"></textarea>
-            </div>
-            <div class="form-row">
+            </label>
+            <label>
               <button class="popup-button" type="submit" required>Отправить</button>
-            </div>
+            </label>
           </div>
         </div>
 
