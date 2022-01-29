@@ -13,6 +13,9 @@
           <a class="home-link" href="#0">
             <img src="svg/noemi-logo.svg" class="logo" alt>
           </a>
+          <div class="burger_menu">
+            <span></span>
+          </div>
           <nav class="menu">
             <ul class="menu-list">
               <li class="menu-list-item">
@@ -384,6 +387,7 @@
                     <picture>
                       <source srcset="images/shop-item-desk1.jpg" media="(min-width: 1200px)">
                       <source srcset="images/shop-item-tablet1.jpg" media="(min-width: 768px)">
+                      <source srcset="image/shop-item-mobile1.jpg" media="(min-width: 285px)">
                       <img src="images/shop-item-desk1.jpg" class="product-pic" alt>
                     </picture>
                     <div class="product-card-content">
@@ -408,7 +412,7 @@
                     <picture>
                      <source srcset="images/shop-item-desk2.jpg" media="(min-width: 1200px)">
                      <source srcset="images/shop-item-tablet2.jpg" media="(min-width: 768px)">
-
+                     <source srcset="image/shop-item-mobile2.jpg" media="(max-width:767px)">
                      <img src="images/shop-item-desk2.jpg" class="product-pic" alt>
                     </picture>
                     <div class="product-card-content">
@@ -430,6 +434,8 @@
                     <picture>
                      <source srcset="images/shop-item-desk3.jpg" media="(min-width: 1200px)">
                      <source srcset="images/shop-item-tablet3.jpg" media="(min-width: 768px)">
+                     <source srcset="image/shop-item-mobile3.jpg" media="(max-width:767px)">
+
                      <img src="images/shop-item-desk3.jpg" class="product-pic" alt>
                     </picture>
                     <div class="product-card-content">
@@ -457,33 +463,34 @@
 
         <footer class="footer">
           <div class="contacts">
-            <div class="social-list">
-              <div class="soc-list-el">
+            <ul class="social-list">
+              <li class="soc-list-el">
                 <a class="tw" href="#0">
                   <span class="sm_sr">twitter</span>
                 </a>
-              </div>
-              <div class="soc-list-el">
+              </li>
+
+              <li class="soc-list-el">
                 <a class="pn" href="#0">
                   <span class="sm_sr">pinterest</span>
                 </a>
-              </div>
-              <div class="soc-list-el">
+              </li>
+              <li class="soc-list-el">
                 <a class="fb" href="#0">
                   <span class="sm_sr">facebook</span>
                 </a>
-              </div>
-              <div class="soc-list-el">
+              </li>
+              <li class="soc-list-el">
                 <a class="inst" href="#0">
                   <span class="sm_sr">instagram</span>
                 </a>
-              </div>
-              <div class="soc-list-el">
+              </li>
+              <li class="soc-list-el">
                 <a class="tm" href="#0">
                   <span class="sm_sr">tumbler</span>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
       
           <div class="copyright">
@@ -529,9 +536,9 @@
               <div class="form-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</div>
               <textarea class="popup-field" placeholder="Может, больше рецептов?"></textarea>
             </label>
-            <label>
-              <button class="popup-button" type="submit" required>Отправить</button>
-            </label>
+            
+            <button class="popup-button" type="submit" required>Отправить</button>
+            
           </div>
         </div>
 
