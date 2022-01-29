@@ -36,6 +36,12 @@
       background-image: url("../images/banner-bg-tablet.jpg");
     }
   }
+
+  @media (max-width: 767px) {
+    .header {
+      background-image: url("../images/banner-mobile.jpg");
+    }
+  }
   
   .header:after {
     content: "";
@@ -59,11 +65,18 @@
     margin-right: auto;
     align-items: center;
   }
+
+  @media (min-width:768px) and (max-width: 1199px) {
+    .container {
+      width: 90%;
+    }
+    
+  }
   
   .logo {
     width: 182px;
   }
-  
+
   .menu {
     display: flex;
     justify-content: space-between;
@@ -91,6 +104,31 @@
     text-decoration: underline;
   }
   
+  
+  @media (max-width: 1199px) {
+    .menu {
+      display: none;
+    }
+    .burger_menu, .burger_menu::after, .burger_menu::before {
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 3px;
+      background-color: #c8cccb;
+      margin-right: 0;
+    }
+    .menu_burger::after {
+      content: "";
+      bottom: 5px;
+    }
+
+    .burger_menu::before {
+      content: "";
+      top: 5px;
+    }
+  }
+  
+
   .intro {
     display: flex;
     width: 65%;
@@ -117,6 +155,12 @@
     }
   }
 
+  @media (max-width:767px) {
+    .welcome-title {
+      font-size: 1.625rem;
+    }
+  }
+
   
   .trend-title {
     font-family: "OpenSans-Bold";
@@ -125,6 +169,12 @@
     text-align: center;
     margin-top: 63px;
 
+  }
+
+  @media (max-width:767px) {
+    .trend-title {
+      margin-top: 44px;
+    }
   }
 
   .trend-title::after {
@@ -143,7 +193,7 @@
   .trend-cards {
     display: flex;
     justify-content: space-between;
-  }
+  } 
 
   .trend-card {
     background-repeat: no-repeat;
@@ -172,6 +222,22 @@
       margin-top: 1%;
     }
   }
+
+  @media (max-width: 767px) {
+    .trend-cards {
+      flex-direction: column;
+    }
+    
+    .trend-card {
+      width: 100%;
+    }
+
+    .trend-card:nth-child(n+1){
+      margin-top: 1%;
+    }
+
+
+  } 
 
   .trend-card:after {
     content: "";
@@ -202,8 +268,6 @@
   }
 
   .trend-card-content {
-    display: flex;
-    flex-direction: column;
     border: solid #b59f5b 1px;
     margin-left: 5%;
     margin-bottom: 5%;
@@ -253,9 +317,15 @@
     margin-top: 64px;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .content {
       width: 90%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content {
+      flex-direction: column;
     }
   }
   
@@ -269,27 +339,45 @@
       margin-right: 10%;
     }
   }
+
+  @media (max-width:767px) {
+    .main {
+      width: 100%;
+    }
+  }
   
   .card {
     display: flex;
     align-items: flex-start;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  .card:nth-child(n + 2) {
+    margin-top: 64px;
+  }
+
+  @media (max-width: 1199px) {
     .card {
       flex-direction: column;
     }
   }
-  
-  .card:nth-child(n + 2) {
-    margin-top: 64px;
+
+  @media (min-width:768px) and (max-width: 1199px)  {
+    .card:nth-child(n + 2) {
+      margin-top: 64px;
+    }
+  }
+ 
+  @media (max-width: 767px) {
+    .card:nth-child(n + 2) {
+      margin-top: 35px;
+    }
   }
   
   .pic {
     width: 45%;
   }
   
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .pic {
       width: 100%;
     }
@@ -301,12 +389,11 @@
     font-size: 1.25rem;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .title {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
-
   
   .card-content {
     color: black;
@@ -314,7 +401,7 @@
     margin-left: 30px;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .card-content {
       margin-left: 0px;
     }
@@ -325,7 +412,7 @@
     list-style-type: none;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .tags {
       margin-top: 15px;
     }
@@ -358,7 +445,7 @@
     margin-top: 13px;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .title-link {
       font-size: 1rem;
     }
@@ -372,6 +459,14 @@
     display: flex;
     margin-top: 38px;
   }
+
+  @media (max-width: 767px) {
+    .info {
+      margin-top: 25px;
+    }
+  }
+  
+  
   
   .author {
     font-size: 0.75rem;
@@ -389,7 +484,7 @@
     margin-top: 53px;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .post-text {
       margin-top: 35px;
     }
@@ -405,10 +500,25 @@
       margin-top: 17px;
     }
   }
+
+  @media (max-width: 767px) {
+    .post-text {
+      margin-top: 25px;
+    }
+  }
+  
+
   .aside {
     width: 276px;
     font-family: OpenSans;
   }
+
+  @media (max-width: 767px) {
+    .aside {
+      width: 100%;
+    }
+  }
+
   
   .aside-title {
     display: block;
@@ -430,6 +540,13 @@
     margin-right: auto;
     margin-top: 14px;
     margin-bottom: 26px;
+  }
+
+  @media (max-width: 767px) {
+    .aside-title {
+      font-size: 1rem;
+      margin-top: 44px;
+    }
   }
   
   .new-post {
@@ -482,7 +599,13 @@
   .field:focus {
     outline: 1px solid #b59f5b;
   }
-  
+
+  @media (max-width: 767px) {
+    .field {
+      width: calc(100% - 45px);
+    }
+  }
+
   .button {
     width: 45px;
     height: 45px;
@@ -550,6 +673,15 @@
     background-color: #323232;
   }
   
+  @media (max-width: 767px) {
+    .mail-button {
+      width: 100%;
+    }
+
+    .mail-field {
+      width: 100%
+    }
+  }
   .section-tags {
     margin-top: 60px;
   }
@@ -634,10 +766,30 @@
     }
   }
 
+  @media (max-width:767px) {
+    .product-cards {
+      width: 80%;
+      flex-wrap: wrap;
+    }
+  }
+
   .product-card {
     display: flex;
     flex-direction: column;
     width: 25%;
+  }
+
+  @media (max-width: 767px) {
+    .product-cards {
+      flex-direction: column;
+    }
+    .product-card {
+      width: 100%;
+    }
+    
+    .product-card:nth-child(n+1) {
+      margin-top: 24px;
+    }
   }
 
   @media (min-width:768px) and (max-width: 1199px) {
@@ -729,7 +881,7 @@
     justify-content: center;
   }
 
-  @media (min-width:768px) and (max-width: 1199px) {
+  @media (max-width: 1199px) {
     .contacts {
       width: 90%;
     }
@@ -738,6 +890,8 @@
   .social-list {
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
+
   }
   
   .soc-list-el {
@@ -817,14 +971,14 @@
 
   .close-button {
     position: absolute;
-    width: 1.125rem;
-    height: 1.125rem;
+    width: 1.6rem;
+    height: 1.6rem;
     display: inline-block;
     background: transparent;
     border: none;
     cursor: pointer;
-    margin-top: -6vh;
-    margin-left: 24.5vw;
+    right: 0;
+    top: -2.2rem;
 
   }
   .close-button::before {
@@ -834,18 +988,28 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1.125rem;
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   .close {
     display: none;
   }
 
+  @media (max-width:768px) {
+    .close-button {
+      top: -1.7rem
+
+    }
+  }
+  
   .popup-content {
     position: relative;
     width: 30vw;
     height: 60vh;
     margin: auto;
-    margin-top: 260px;
+    margin-top: 16rem;
     padding: 40px;
     background-color: white;
     z-index: 100;
@@ -856,16 +1020,8 @@
       width: 50%;
     }
   }
-  
-  .popup-text {
-    width: 24vw; 
-  }
 
-  @media (min-width:768px) and (max-width: 1199px) {
-    .popup-text {
-      width: 100%;
-    }
-  }
+  
 
   .popup-title {
     font-family: OpenSans-Bold;
@@ -888,6 +1044,8 @@
     margin-bottom: 26px;
   }
 
+  
+
   .form-question {
     font-family: OpenSans;
     font-size: 0.75rem;
@@ -895,6 +1053,22 @@
     margin-top: 2.25rem;
     width: 100%;
   }
+
+  @media (max-width:768px) {
+    .popup-content {
+      width: 90%;
+      height: 98%;
+      margin-top: 1.7rem;
+      padding: 28px;
+    }
+    .popup-title {
+      font-size: 1rem;
+    }
+    .form-question {
+      margin-top: 1.625rem;
+    }
+  }
+
   .select {
     display: block;
     font-family: OpenSans;
@@ -989,7 +1163,9 @@
     font-size: 0.875rem;
     cursor: pointer;
   }
-  
   .popup-button:hover {
-    background-color: #323232;
+    background-color: #323232; 
   }
+
+
+
