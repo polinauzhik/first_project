@@ -109,25 +109,29 @@
     .menu {
       display: none;
     }
-    .burger_menu, .burger_menu::after, .burger_menu::before {
+    .burger_menu, .burger_menu::after, .burger_menu::before  {
       display: block;
       position: relative;
       width: 24px;
       height: 3px;
       background-color: #c8cccb;
       margin-right: 0;
+      cursor: pointer;
+      border: none;
     }
-    .menu_burger::after {
+    .burger_menu::after {
+      
       content: "";
-      bottom: 5px;
+      bottom: 10px;
+    }
+    .burger_menu::before {
+      
+      content: "";
+      top: 7px;
     }
 
-    .burger_menu::before {
-      content: "";
-      top: 5px;
-    }
+   
   }
-  
 
   .intro {
     display: flex;
@@ -138,6 +142,25 @@
     margin-top: 115px;
   }
   
+  @media (max-width:767px) {
+    .intro {
+      margin-top: 10%;
+    }
+    .container {
+      flex-direction: column-reverse;
+    }
+    .logo {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      margin-top: 40%;
+    }
+
+    .burger_menu {
+      align-self: flex-end;
+    }
+  } 
+
   .welcome-title {
     width: 700px;
     text-align: center;
